@@ -1,0 +1,23 @@
+name: Branch Name Check
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
+jobs:
+  validate-branch-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check branch name
+        run: |
+          echo "🔍 ブランチ名をチェックします: ${{ github.head_ref }}"
+
+          if [[ ! "${{ github.head_ref }}" =~ ^(feature|bugfix|hotfix|refactor|release|docs|chore)/[a-z0-9._-]+$ ]]; then
+            echo "❌ ブランチ名 '${{ github.head_ref }}' は規則に従っていません！"
+            echo "👉 命名規則: (feature|bugfix|hotfix|refactor|release|docs|chore)/xxxx"
+            echo "例: feature/add-login, bugfix/fix-header-display"
+            exit 1
+          fi
+
+          echo "✅ ブランチ名 '${{ github.head_ref }}' は規則に従っています！"
+          echo "🔄 ブランチ名を変更する必要はありません。"
