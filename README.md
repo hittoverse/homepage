@@ -73,3 +73,49 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+# homepage
+
+## 目的
+
+- webページを作成する
+- githubの使い方を学ぶ
+
+## ルール
+
+### タイプ一覧：
+
+| タイプ名   | 用途              |
+|------------|-------------------|
+| `feature`  | 新機能の追加       |
+| `bugfix`   | バグ修正           |
+| `hotfix`   | 緊急修正           |
+| `refactor` | リファクタリング   |
+| `release`  | リリース関連       |
+| `docs`     | ドキュメント変更   |
+| `chore`    | その他の雑務       |
+
+### 命名例：
+
+- `feature/add-login-form`
+- `bugfix/fix-timezone-error`
+- `docs/update-readme`
+
+🔒 GitHub Actions により、この命名規則に違反するブランチでは PR を作成できません。
+
+### タイプ一覧：
+
+| タイプ        | 用途                             |
+|---------------|----------------------------------|
+| `add`        | 新しい機能の追加                 |
+| `feat`        | 新しい機能の追加                 |
+| `update`     | 既存機能の変更                   |
+| `modify`     | 既存機能の変更                   |
+| `remove`     | 機能の削除                       |
+| `delete`     | 機能の削除                       |
+| `fix`         | バグ修正                         |
+| `docs`        | ドキュメントの変更               |
+| `style`       | コードのフォーマット修正         |
+| `refactor`    | 機能に影響しないコード改善       |
+| `test`        | テストの追加・修正               |
+| `chore`       | ビルド、CI設定などの変更         |
