@@ -119,3 +119,5 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 | `refactor`    | 機能に影響しないコード改善       |
 | `test`        | テストの追加・修正               |
 | `chore`       | ビルド、CI設定などの変更         |
+
+test
